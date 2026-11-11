@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-bidirectional-heartbeat-sentinel"
+version = "0.1.0"
+description = "Zero-overhead liveness, health consensus, and zombie process detection protocol for long-running autonomous agent sessions"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-bidirectional-heartbeat-sentinel = "agent_bidirectional_heartbeat_sentinel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_bidirectional_heartbeat_sentinel*"]
